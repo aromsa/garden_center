@@ -1,0 +1,23 @@
+class CustomerPlants
+  
+  attr_reader :plant, :customer, :favorite, :purchased
+  
+  @@all = []
+
+  def initialize(hash)
+    @plant = hash[:plant]
+    @customer = hash[:customer]
+    #how do I set favorite and purchased to a boolean?
+    @favorite = false
+    @purchased = false
+    CustomerPlants.all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+end
+
+
+
