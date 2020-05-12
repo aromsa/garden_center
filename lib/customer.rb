@@ -33,6 +33,7 @@ class Customer
     #return list of unique names of favorite plants.
     plants.select do |plant|
       plant.favorite == true
+      
     end
   end
 
