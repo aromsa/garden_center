@@ -24,25 +24,18 @@ class Plant
     #find total for each plant. 
     #return the plants name that has the largest total
     #names_totals = {zz: , 3}
-    names_totals = {}
+    plant_totals = {}
     CustomerPlants.all.each do |cp|
         if cp.purchased == true 
           #if name is not in hash, add name
-          if names_totals[:cp.plant.name] += 1
-          else names_totals[cp.plant.name] = 1
+          plant_totals[:cp.plant.name] ||= cp.plant.name
+          if plant_totals[:cp.plant.name] += 1
+          else plant_totals[cp.plant.name] = 1
             binding.pry
         #have to total for each individual plant
     end
     puts names_totals
   end
 end
-
-
-  # def plant_name
-  #   CustomerPlants.all.select do |cp|
-  #     cp.plant
-  #   end
-  # end
-
 
 end
