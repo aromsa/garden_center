@@ -8,8 +8,8 @@ class CustomerPlants
     @plant = hash[:plant]
     @customer = hash[:customer]
     #how do I set favorite and purchased to a boolean?
-    @favorite = false
-    @purchased = false
+    @favorite = hash[:favorite]
+    @purchased = hash[:purchased]
     CustomerPlants.all << self
   end
 

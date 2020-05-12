@@ -30,8 +30,9 @@ class Customer
   end
 
   def favorite_plants
-    plants.select do |plants|
-      membership.favorite == true
+    #return list of unique names of favorite plants.
+    plants.select do |plant|
+      plant.favorite == true
     end
   end
 

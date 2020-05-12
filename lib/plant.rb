@@ -14,17 +14,19 @@ class Plant
     @@all
   end
 
-  def sort_by_type(type)
+  def self.sort_by_type(type)
     Plant.all.select do |plant|
       plant.type == type
+    end
   end
 
-  def best_selling_plant(plant)
+  def self.best_selling_plant
     #find total for each plant. 
     #return the plants name that has the largest total
     total = 0
     CustomerPlants.all.each do |cp|
       if cp.purchased == true 
+        binding.pry
         #have to total for each individual plant
         total += 1
       end
