@@ -1,6 +1,6 @@
 class CustomerPlants
   
-  attr_reader :plant, :customer, :favorite, :purchased
+  attr_accessor :plant, :customer, :favorite, :purchased
   
   @@all = []
 

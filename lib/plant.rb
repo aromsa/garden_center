@@ -1,6 +1,6 @@
 class Plant
 
-  attr_reader :name, :type
+  attr_accessor :name, :type
 
   @@all = []
 
@@ -23,16 +23,19 @@ class Plant
   def self.best_selling_plant
     #find total for each plant. 
     #return the plants name that has the largest total
-    total = 0
+    #names_totals = {zz: , 3}
     names_totals = {}
     CustomerPlants.all.each do |cp|
-        cp.purchased == true 
-        #if name is not in hash, add name
-        binding.pry
+        if cp.purchased == true 
+          #if name is not in hash, add name
+          if names_totals[:cp.plant.name] += 1
+          else names_totals[cp.plant.name] = 1
+            binding.pry
         #have to total for each individual plant
-        total += 1
     end
+    puts names_totals
   end
+end
 
 
   # def plant_name
