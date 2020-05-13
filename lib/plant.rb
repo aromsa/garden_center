@@ -21,21 +21,20 @@ class Plant
   end
 
   def self.best_selling_plant
-    #find total for each plant. 
-    #return the plants name that has the largest total
-    #names_totals = {zz: , 3}
     plant_totals = {}
     CustomerPlants.all.each do |cp|
-        if cp.purchased == true 
-          #if name is not in hash, add name
-          plant_totals[:cp.plant.name] ||= cp.plant.name
-          if plant_totals[:cp.plant.name] += 1
-          else plant_totals[cp.plant.name] = 1
-            binding.pry
-        #have to total for each individual plant
-    end
-    puts names_totals
+      name = cp.plant.name
+        if cp.purchased == true
+          # I found this ||= on the internet and I've read about it but
+          # I'd love to learn more.  If you could touch on this in lecture
+          # I would really appreciate it! I think it means "or"?
+          plant_totals[name] ||= 0
+          plant_totals[name] += 1
+        end
+      end
+      #Also found this on the internet 
+      #(https://stackoverflow.com/questions/6040494/how-to-find-the-key-of-the-largest-value-hash)
+      #Still lot entirely sure what it does. 
+      plant_totals.invert.max&.last
   end
-end
-
 end

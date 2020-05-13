@@ -7,7 +7,6 @@ class CustomerPlants
   def initialize(hash)
     @plant = hash[:plant]
     @customer = hash[:customer]
-    #how do I set favorite and purchased to a boolean?
     @favorite = hash[:favorite]
     @purchased = hash[:purchased]
     CustomerPlants.all << self

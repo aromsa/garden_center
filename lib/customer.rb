@@ -23,16 +23,17 @@ class Customer
     CustomerPlants.new(arguments_hash)
   end
 
-  def plants
-    CustomerPlants.all.select do |cp|
-      cp.customer == self
-    end
-  end
+  # def plants
+  #   CustomerPlants.all.select do |cp|
+  #     cp.customer == self
+  #   end
+  # end
 
   def favorite_plants
-    #return list of unique names of favorite plants.
-    plants.select do |plant|
-      plant.favorite == true
+    #This is not working yet
+    CustomerPlants.all.select do |cp|
+      cp.favorite == true
+      # binding.pry
       
     end
   end

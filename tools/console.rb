@@ -12,8 +12,13 @@ customer4 = Customer.new("Max")
 
 hash1 = {plant: zz, customer: customer1, favorite: true, purchased: true}
 hash2 = {plant: phlox, customer: customer2, favorite: true, purchased: true}
-hash3 = {plant: zz, customer: customer3, favorite: false, purchased: true}
-hash4 = {plant: zz, customer: customer1, favorite: true, purchased: true}
+hash3 = {plant: fig, customer: customer3, favorite: false, purchased: true}
+hash4 = {plant: fig, customer: customer4, favorite: true, purchased: true}
+hash5 = {plant: pothos, customer: customer2, favorite: true, purchased: true}
+hash6 = {plant: fig, customer: customer4, favorite: true, purchased: true}
+hash7 = {plant: pothos, customer: customer1, favorite: true, purchased: true}
+hash8 = {plant: zz, customer: customer2, favorite: true, purchased: true}
+
 
 cp1 = CustomerPlants.new(hash1)
 cp2 = CustomerPlants.new(hash2)
