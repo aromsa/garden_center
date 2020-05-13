@@ -23,11 +23,11 @@ class Customer
     CustomerPlants.new(arguments_hash)
   end
 
-  # def plants
-  #   CustomerPlants.all.select do |cp|
-  #     cp.customer == self
-  #   end
-  # end
+  def plants
+    CustomerPlants.all.select do |cp|
+      cp.customer == self
+    end
+  end
 
   def favorite_plants
     #This is not working yet
