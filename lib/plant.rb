@@ -21,6 +21,7 @@ class Plant
     end
   end
 
+
   def self.best_selling_plant
     plant_totals = {}
     CustomerPlants.all.each do |cp|

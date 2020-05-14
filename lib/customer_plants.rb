@@ -16,7 +16,9 @@ class CustomerPlants
     @@all
   end
 
-
+  def self.garden_designs(name)
+    Customer.all.select { |c| c.name == name}
+  end
 
 end
 
