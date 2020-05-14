@@ -25,6 +25,8 @@ cp2 = CustomerPlants.new(hash2)
 cp3 = CustomerPlants.new(hash3)
 cp4 = CustomerPlants.new(hash4)
 
+gd1 = GardenDesign.new("urban garden", "fall-blooming perennials", cp1)
+
 
 binding.pry
 

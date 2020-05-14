@@ -1,10 +1,11 @@
 class Plant
 
   attr_accessor :name, :type
+  # attr_reader :name, md
 
   @@all = []
 
-  def initialize(name, type)
+  def initialize(name, type)#better not to just "type" as an instance,Md
     @name = name
     @type = type
     Plant.all << self

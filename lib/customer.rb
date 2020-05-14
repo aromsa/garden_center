@@ -1,6 +1,7 @@
 class Customer
 
   attr_accessor :name
+  # attr_reader :name, md
   
   @@all = []
   
@@ -38,5 +39,6 @@ class Customer
     end
   end
 
+  
 end
 
