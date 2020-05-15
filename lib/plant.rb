@@ -1,19 +1,21 @@
 class Plant < ActiveRecord::Base
+    has_many :customer_plants
+    has_many :customers, through: :customer_plants
 end
 
-  attr_accessor :name, :type
+  # attr_accessor :name, :type
 
-  @@all = []
+  # @@all = []
 
-  def initialize(name, type)
-    @name = name
-    @type = type
-    Plant.all << self
-  end
+  # def initialize(name, type)
+  #   @name = name
+  #   @type = type
+  #   Plant.all << self
+  # end
 
-  def self.all
-    @@all
-  end
+  # def self.all
+  #   @@all
+  # end
 
   def self.sort_by_type(type)
     Plant.all.select do |plant|

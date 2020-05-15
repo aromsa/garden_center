@@ -1,18 +1,20 @@
 class Customer < ActiveRecord::Base
+    has_many :customer_plants
+    has_many :plants, through: :customer_plants
 end
 
-  attr_accessor :name
+  # attr_accessor :name
   
-  @@all = []
+  # @@all = []
   
-  def initialize(name)
-    @name = name
-    Customer.all << self
-  end
+  # def initialize(name)
+  #   @name = name
+  #   Customer.all << self
+  # end
 
-  def self.all
-    @@all
-  end
+  # def self.all
+  #   @@all
+  # end
 
   def add_favorite_plant(plant)
       arguments_hash = {plant: plant, customer: self, favorite: true, purchased: false}
