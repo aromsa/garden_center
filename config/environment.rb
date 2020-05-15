@@ -1,4 +1,6 @@
 require 'pry'
+require 'active_record'
+require 'sqlite3'
 require_relative '../lib/customer_plant'
 require_relative '../lib/customer'
 require_relative '../lib/plant'
