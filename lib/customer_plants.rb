@@ -1,5 +1,5 @@
-class CustomerPlants
-  
+class CustomerPlants < ActiveRecord::Base
+end
   attr_accessor :plant, :customer, :favorite, :purchased
   
   @@all = []
@@ -16,7 +16,7 @@ class CustomerPlants
     @@all
   end
 
-end
+
 
 
 

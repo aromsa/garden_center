@@ -1,4 +1,5 @@
-class Customer
+class Customer < ActiveRecord::Base
+end
 
   attr_accessor :name
   
@@ -38,5 +39,5 @@ class Customer
     end
   end
 
-end
+
 

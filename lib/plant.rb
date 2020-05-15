@@ -1,4 +1,5 @@
-class Plant
+class Plant < ActiveRecord::Base
+end
 
   attr_accessor :name, :type
 
@@ -37,4 +38,3 @@ class Plant
       #Still lot entirely sure what it does. 
       plant_totals.invert.max&.last
   end
-end
